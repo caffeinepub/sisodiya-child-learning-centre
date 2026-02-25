@@ -1,61 +1,47 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Fix 'Ummeed' spelling across all pages",
+  "title": "Replace logo with corrected spelling: Umheed → Ummeed",
   "requirements": [
     {
-      "id": "REQ-11",
-      "summary": "Find and replace all incorrect or inconsistent spellings of 'Ummeed' with the correct spelling across all frontend source files",
+      "id": "REQ-1",
+      "summary": "Replace the existing logo image with a corrected version where 'Ek Nayi Umheed' is changed to 'Ek Nayi Ummeed' throughout the application",
       "acceptanceCriteria": [
-        "The string 'Ek Nayi Ummeed' appears consistently and correctly spelled in all locations where the tagline is displayed (Hero section, Navigation, Footer, About section, etc.).",
-        "No incorrect variants such as 'Ummid', 'Umeed', or 'Umid' remain anywhere in the frontend source files or rendered UI.",
-        "All visible page text, meta content, and component props referencing the tagline use the spelling 'Ummeed'."
+        "The logo image displays 'Ek Nayi Ummeed' (double-m) at the bottom of the circular badge",
+        "The text 'Umheed' no longer appears anywhere in the logo",
+        "All other logo elements (brain, hands, border, top text) remain visually unchanged",
+        "The corrected logo is used everywhere it appears in the app: HeroSection, Navigation, Footer, LogoDownloadButton, and SCLCLogo component"
       ],
       "file_operations": [
         {
+          "path": "frontend/public/assets/generated/sclc-logo-v2.dim_400x400.png",
+          "operation": "modify",
+          "description": "Replace the existing logo image file with the corrected version generated from the image edit request. The new image changes the bottom text from 'Ek Nayi Umheed' to 'Ek Nayi Ummeed' while keeping all other visual elements (brain illustration, hands, circular border, 'Sisodiya Child Learning Centre' text) identical. This file is referenced by SCLCLogo component, HeroSection, Navigation, Footer, and LogoDownloadButton."
+        },
+        {
+          "path": "frontend/src/components/SCLCLogo.tsx",
+          "operation": "modify",
+          "description": "Verify that the SCLCLogo component correctly references the updated logo image at frontend/public/assets/generated/sclc-logo-v2.dim_400x400.png and that the text overlay 'Ek Nayi Ummeed' remains properly positioned. Ensure the component works correctly with both color and white variants."
+        },
+        {
           "path": "frontend/src/components/HeroSection.tsx",
           "operation": "modify",
-          "description": "Review and correct any misspellings of 'Ummeed' in the tagline badge, ensuring it displays 'Ek Nayi Ummeed' consistently."
-        },
-        {
-          "path": "frontend/src/components/AboutSection.tsx",
-          "operation": "modify",
-          "description": "Search for and replace any incorrect variants of 'Ummeed' (such as 'Ummid', 'Umeed', 'Umid') with the correct spelling 'Ummeed' in all text content including mission statements and descriptive text."
-        },
-        {
-          "path": "frontend/src/components/ServicesSection.tsx",
-          "operation": "modify",
-          "description": "Check service descriptions and titles for any misspellings of 'Ummeed' and correct them to use the proper spelling."
-        },
-        {
-          "path": "frontend/src/components/ContactSection.tsx",
-          "operation": "modify",
-          "description": "Review contact section text content for any incorrect spellings of 'Ummeed' and replace with the correct spelling."
+          "description": "Verify that the HeroSection component correctly displays the updated logo image with the corrected spelling and that the logo renders properly within the hero layout."
         },
         {
           "path": "frontend/src/components/Navigation.tsx",
           "operation": "modify",
-          "description": "Ensure navigation links, labels, and any displayed text use the correct spelling 'Ummeed' throughout."
+          "description": "Verify that the Navigation component correctly displays the updated logo image with the corrected spelling in the navigation bar."
         },
         {
           "path": "frontend/src/components/Footer.tsx",
           "operation": "modify",
-          "description": "Check footer content including taglines, descriptions, and informational text for misspellings of 'Ummeed' and correct them."
+          "description": "Verify that the Footer component correctly displays the updated logo image (white variant) with the corrected spelling."
         },
         {
-          "path": "frontend/src/pages/Home.tsx",
+          "path": "frontend/src/components/LogoDownloadButton.tsx",
           "operation": "modify",
-          "description": "Review Home page component for any text props or content containing 'Ummeed' variants and ensure correct spelling is used."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Check App component for any references to the tagline or 'Ummeed' and correct spelling if found."
-        },
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Review HTML meta tags, title, and any inline text for misspellings of 'Ummeed' and ensure the correct spelling is used throughout."
+          "description": "Verify that the LogoDownloadButton component correctly references and displays the updated logo image with the corrected spelling when opening the print-ready popup window."
         }
       ]
     }

@@ -11,6 +11,6 @@
   "frontend/src/components/Footer.tsx": "Footer with the new SCLCLogo SVG component (white variant) in the brand column, a \"Download Logo (PDF)\" button via LogoDownloadButton, quick nav links, address, director name, copyright, and caffeine.ai attribution.",
   "frontend/src/pages/Home.tsx": "Homepage composing HeroSection, AboutSection, ServicesSection, and ContactSection in order.",
   "frontend/src/App.tsx": "Root app component wrapping the Home page in the Layout component.",
-  "frontend/src/components/SCLCLogo.tsx": "Reusable logo component for Sisodiya Child Learning Centre that renders the brain-care themed PNG image (`sclc-logo-v2.dim_400x400.png`). Supports `color` (default, with warm drop-shadow) and `white` (brightness/invert CSS filter for dark backgrounds) variants via the same prop interface as before.",
-  "frontend/src/components/LogoDownloadButton.tsx": "Download button component that opens a print-ready popup window containing the full SCLC SVG logo at 800×800 resolution with center name and tagline, then auto-triggers the browser print dialog so the user can save it as a PDF."
+  "frontend/src/components/SCLCLogo.tsx": "Reusable SCLC logo component that renders the Version 2 logo PNG image with a corrected 'Ek Nayi Ummeed' text overlay (with an opaque background pill) that fully covers the original 'Ek Nayi Umheed' text baked into the image. Supports `color` (default) and `white` (CSS brightness/invert filter) variants.",
+  "frontend/src/components/LogoDownloadButton.tsx": "Download button component that opens a print-ready popup window containing the Version 5 SCLC logo image at 320×320 display size with center name and tagline, then auto-triggers the browser print dialog so the user can save it as a PDF."
 }

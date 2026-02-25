@@ -1,150 +1,26 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 11,
-  "summary": "Website/app for Sisodiya Child Learning Centre (Ek Nayi Ummeed), an integrated therapy center for children with special needs located at LG-382, Sector 5, Gurugram, Haryana 122001. Director: Prince Sisodiya.",
-  "architectural_notes": [
-    "Center: Sisodiya Child Learning Centre | Director: Prince Sisodiya | Address: LG-382, Sector 5, Gurugram, Haryana 122001"
-  ],
+  "projectStateVersion": 3,
+  "summary": "Project involves a logo with the text 'Ek Nayi Ummeed' — user wants the spelling corrected from 'umheed' to 'ummeed' inside the logo.",
+  "architectural_notes": [],
   "known_issues": [
-    "Inconsistent/incorrect spelling of 'Ummeed' found across website pages"
+    "Logo contains misspelling 'umheed' that needs to be corrected to 'ummeed'"
   ],
   "isFixRequest": true,
+  "imageRequirements": "## Edit Images\n- Change the bottom text inside the circular logo from 'Ek Nayi Umheed' to 'Ek Nayi Ummeed', keeping all other visual elements unchanged (sclc-logo-v2.dim_400x400.png > sclc-logo-v2.dim_400x400.png)",
   "existing_features": [
     {
-      "id": "feature-create-a-hero-homepage-section-that-prominently-displays-the-center-name-sisodiya-child-learning-centre-the-tagline-ek-nayi-ummeed-a-new-hope-a-brief-mission-statement-about-being-an-integrated-therapy-center-for-children-with-special-needs-and-the-director-s-name-prince-sisodiya",
-      "title": "Create a Hero / Homepage section that prominently displays the center name 'Sisodiya Child Learning Centre', the tagline 'Ek Nayi Ummeed' (A New Hope), a brief mission statement about being an integrated therapy center for children with special needs, and the director's name 'Prince Sisodiya'.",
+      "id": "feature-generate-a-new-version-of-the-uploaded-logo-image-sclc-logo-v2-dim-400x400-png-where-the-text-ek-nayi-umheed-at-the-bottom-of-the-circular-logo-is-corrected-to-read-ek-nayi-ummeed-keeping-all-other-visual-elements-brain-illustration-hands-circular-border-sisodiya-child-learning-centre-text-identical",
+      "title": "Generate a new version of the uploaded logo image (sclc-logo-v2.dim_400x400.png) where the text 'Ek Nayi Umheed' at the bottom of the circular logo is corrected to read 'Ek Nayi Ummeed', keeping all other visual elements (brain illustration, hands, circular border, 'Sisodiya Child Learning Centre' text) identical.",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
-    },
-    {
-      "id": "feature-create-an-about-us-section-describing-sisodiya-child-learning-centre-s-mission-and-vision-as-an-integrated-therapy-center-dedicated-to-supporting-children-with-special-needs-highlighting-the-center-s-holistic-and-child-centered-approach",
-      "title": "Create an 'About Us' section describing Sisodiya Child Learning Centre's mission and vision as an integrated therapy center dedicated to supporting children with special needs, highlighting the center's holistic and child-centered approach.",
-      "reqIds": [
-        "REQ-2"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-services-therapies-section-listing-the-types-of-therapies-and-programs-typically-offered-at-an-integrated-therapy-center-for-children-with-special-needs-e-g-speech-therapy-occupational-therapy-physiotherapy-behavioral-therapy-special-education-sensory-integration",
-      "title": "Create a 'Services & Therapies' section listing the types of therapies and programs typically offered at an integrated therapy center for children with special needs (e.g., Speech Therapy, Occupational Therapy, Physiotherapy, Behavioral Therapy, Special Education, Sensory Integration).",
-      "reqIds": [
-        "REQ-3"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-contact-us-section-displaying-the-full-address-lg-382-sector-5-gurugram-haryana-122001-and-a-contact-inquiry-form-with-fields-for-name-phone-number-email-and-message",
-      "title": "Create a 'Contact Us' section displaying the full address (LG-382, Sector 5, Gurugram, Haryana 122001) and a contact inquiry form with fields for name, phone number, email, and message.",
-      "reqIds": [
-        "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-apply-a-warm-nurturing-and-professional-visual-theme-throughout-the-website-use-soft-warm-tones-e-g-gentle-oranges-warm-yellows-and-calm-greens-reminiscent-of-hope-and-childhood-growth-with-rounded-modern-typography-clean-card-based-layouts-and-cheerful-but-accessible-design-elements-consistent-with-a-children-s-therapy-center",
-      "title": "Apply a warm, nurturing, and professional visual theme throughout the website: use soft warm tones (e.g., gentle oranges, warm yellows, and calm greens) reminiscent of hope and childhood growth, with rounded modern typography, clean card-based layouts, and cheerful but accessible design elements consistent with a children's therapy center.",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-replace-all-existing-placeholder-or-generated-logos-across-the-website-with-the-user-provided-official-logo-img-20250924-134707-jpg-circular-logo-featuring-sisodiya-child-learning-centre-ek-nayi-ummid-text-around-the-border-colorful-hands-and-a-brain-head-silhouette-in-the-center-save-it-as-a-static-asset-at-frontend-public-assets-generated-sclc-logo-png-and-render-it-everywhere-a-logo-appears-navigation-bar-hero-section-footer-no-other-logo-or-placeholder-image-should-be-used",
-      "title": "Replace all existing placeholder or generated logos across the website with the user-provided official logo (IMG_20250924_134707.jpg — circular logo featuring 'Sisodiya Child Learning Centre (Ek Nayi Ummid)' text around the border, colorful hands, and a brain/head silhouette in the center). Save it as a static asset at frontend/public/assets/generated/sclc-logo.png and render it everywhere a logo appears (Navigation bar, Hero section, Footer). No other logo or placeholder image should be used.",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-redesign-the-official-sclc-logo-as-a-polished-high-quality-circular-logo-that-matches-the-website-s-warm-nurturing-visual-theme-soft-oranges-warm-yellows-calm-greens-rounded-typography-the-logo-must-retain-the-core-identity-elements-the-text-sisodiya-child-learning-centre-and-ek-nayi-ummeed-around-the-border-the-colorful-hands-motif-and-the-brain-head-silhouette-in-the-center-improve-color-harmony-font-legibility-and-visual-balance-to-align-with-the-site-s-design-system-save-the-redesigned-logo-as-a-static-asset-at-frontend-public-assets-generated-sclc-logo-png-and-replace-all-existing-usages-navigation-bar-hero-section-footer-with-the-new-file",
-      "title": "Redesign the official SCLC logo as a polished, high-quality circular logo that matches the website's warm, nurturing visual theme (soft oranges, warm yellows, calm greens, rounded typography). The logo must retain the core identity elements: the text 'Sisodiya Child Learning Centre' and 'Ek Nayi Ummeed' around the border, the colorful hands motif, and the brain/head silhouette in the center. Improve color harmony, font legibility, and visual balance to align with the site's design system. Save the redesigned logo as a static asset at frontend/public/assets/generated/sclc-logo.png and replace all existing usages (Navigation bar, Hero section, Footer) with the new file.",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-create-a-high-resolution-pdf-version-of-the-redesigned-sclc-logo-and-make-it-available-as-a-downloadable-static-asset-at-frontend-public-assets-generated-sclc-logo-pdf-add-a-visible-download-logo-pdf-button-or-link-on-the-website-e-g-in-the-footer-or-about-section-so-the-user-can-download-the-pdf-directly-from-the-site",
-      "title": "Create a high-resolution PDF version of the redesigned SCLC logo and make it available as a downloadable static asset at frontend/public/assets/generated/sclc-logo.pdf. Add a visible 'Download Logo (PDF)' button or link on the website (e.g., in the Footer or About section) so the user can download the PDF directly from the site.",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-update-the-sclclogo-react-component-frontend-src-components-sclclogo-tsx-to-render-the-newly-generated-brain-care-themed-logo-image-sclc-logo-v2-dim-400x400-png-as-a-static-asset-from-frontend-public-assets-generated-the-component-must-continue-to-support-the-existing-color-and-white-variant-props-applying-appropriate-css-filters-or-overlays-for-the-white-variant-replace-all-current-usages-in-navigation-herosection-and-footer-with-this-updated-component",
-      "title": "Update the SCLCLogo React component (frontend/src/components/SCLCLogo.tsx) to render the newly generated brain-care themed logo image (sclc-logo-v2.dim_400x400.png) as a static asset from frontend/public/assets/generated/. The component must continue to support the existing 'color' and 'white' variant props, applying appropriate CSS filters or overlays for the white variant. Replace all current usages in Navigation, HeroSection, and Footer with this updated component.",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
     }
   ],
-  "new_feature_requests": [
-    {
-      "id": "AR-1",
-      "summary": "Homepage with center name, tagline 'Ek Nayi Ummeed', address, and director info",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-2",
-      "summary": "About Us section describing the integrated therapy center and its mission for children with special needs",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-3",
-      "summary": "Services/Therapies section listing available therapies and programs offered at the center",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-4",
-      "summary": "Contact page with address (LG-382, Sector 5, Gurugram, Haryana 122001) and contact form",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-9",
-      "summary": "Implement a backend canister that stores contact form submissions (name, phone, email, message, timestamp) and exposes a function to submit and retrieve inquiries.",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "status": "pending"
-    },
-    {
-      "id": "AR-10",
-      "summary": "Replace generated logo with user-provided logo; no placeholder or generated logo should be used",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-11",
-      "summary": "Redesign/perfect the centre logo to match the website theme and provide a downloadable PDF version of the logo",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-12",
-      "summary": "Fix 'Ummeed' spelling across all pages to ensure consistent correct spelling",
-      "reqIds": [],
-      "status": "pending"
-    },
-    {
-      "id": "AR-13",
-      "summary": "Find and replace all incorrect or inconsistent spellings of 'Ummeed' (e.g., 'Ummid', 'Umeed', 'Umid', or any other variant) with the correct spelling 'Ummeed' across all frontend source files, including HeroSection.tsx, AboutSection.tsx, ServicesSection.tsx, ContactSection.tsx, Navigation.tsx, Footer.tsx, Home.tsx, App.tsx, index.html, and any other component or page that contains the tagline or references to 'Ek Nayi Ummeed'.",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "status": "pending"
-    }
-  ],
+  "new_feature_requests": [],
   "gameProjectType": "none",
-  "projectName": "Sisodiya Child Learning Centre",
+  "projectName": "Ek Nayi Ummeed",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

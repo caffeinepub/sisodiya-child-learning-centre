@@ -1,21 +1,31 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-25T10:38:20.676Z",
-  "summary": "The diff shows only a modification to project_state.json, which is a state tracking file. No actual frontend source files (HeroSection.tsx, AboutSection.tsx, ServicesSection.tsx, ContactSection.tsx, Navigation.tsx, Footer.tsx, Home.tsx, App.tsx, index.html, etc.) were modified to fix the 'Ummeed' spelling. The project_state.json itself still contains references to 'Ummid' in feature IDs, and no actual spelling fixes were made in the frontend source files.",
+  "generatedAt": "2026-02-25T12:49:47.041Z",
+  "summary": "The diff implements a text overlay approach in the SCLCLogo React component to display 'Ek Nayi Ummeed' over the original image, rather than replacing the actual image file. The core requirement of generating a new version of the PNG image with corrected text is not fulfilled — the underlying image asset (sclc-logo-v2.dim_400x400.png) remains unchanged. The overlay approach partially addresses some acceptance criteria but violates the constraint that 'Only the spelling inside the logo image must change' and the non-goal of 'Changing the tagline text rendered via the SCLCLogo React component overlay'.",
   "missing_requirements": [
     {
-      "id": "REQ-11",
-      "requirement": "Find and replace all incorrect or inconsistent spellings of 'Ummeed' with the correct spelling across all frontend source files including HeroSection.tsx, AboutSection.tsx, ServicesSection.tsx, ContactSection.tsx, Navigation.tsx, Footer.tsx, Home.tsx, App.tsx, index.html, and any other component referencing 'Ek Nayi Ummeed'.",
-      "reason": "The diff only modifies project_state.json. No frontend source files were changed. The actual spelling fixes in HeroSection.tsx, AboutSection.tsx, ServicesSection.tsx, ContactSection.tsx, Navigation.tsx, Footer.tsx, Home.tsx, App.tsx, and index.html are entirely absent from the diff.",
+      "id": "REQ-1",
+      "requirement": "Generate a new version of the uploaded logo image (sclc-logo-v2.dim_400x400.png) where the text 'Ek Nayi Umheed' is corrected to 'Ek Nayi Ummeed' in the image itself",
+      "reason": "No new image file was added or replaced. The diff shows no changes to the PNG asset. The fix is implemented as a React overlay on top of the existing uncorrected image, which means the image file still contains 'Umheed'. The BuildRequest explicitly states the image itself should be edited, and the non-goals explicitly say 'Changing the tagline text rendered via the SCLCLogo React component overlay' is out of scope — yet that is exactly what was done.",
       "evidence": [
-        "project_state.json"
+        "frontend/src/components/SCLCLogo.tsx"
       ]
     }
   ],
-  "hallucinated_features": [],
+  "hallucinated_features": [
+    {
+      "description": "A React text overlay with a styled pill/background is added to the SCLCLogo component to cover the original 'Ek Nayi Umheed' text in the image",
+      "reason": "The BuildRequest explicitly lists 'Changing the tagline text rendered via the SCLCLogo React component overlay' as a non-goal, and the constraint states 'Only the spelling inside the logo image must change — no other design or layout modifications'. The overlay adds new visual elements (a pill-shaped background, overlay text) that were not requested and are explicitly excluded.",
+      "evidence": [
+        "frontend/src/components/SCLCLogo.tsx"
+      ]
+    }
+  ],
   "confidence": 0.9,
   "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/SCLCLogo.tsx",
     "project_state.json"
   ]
 }

@@ -1,4 +1,24 @@
 {
   "kind": "feature_evidence_report",
-  "features": []
+  "features": [
+    {
+      "featureId": "feature-generate-a-new-version-of-the-uploaded-logo-image-sclc-logo-v2-dim-400x400-png-where-the-text-ek-nayi-umheed-at-the-bottom-of-the-circular-logo-is-corrected-to-read-ek-nayi-ummeed-keeping-all-other-visual-elements-brain-illustration-hands-circular-border-sisodiya-child-learning-centre-text-identical",
+      "featureTitle": "Generate a new version of the uploaded logo image (sclc-logo-v2.dim_400x400.png) where the text 'Ek Nayi Umheed' at the bottom of the circular logo is corrected to read 'Ek Nayi Ummeed', keeping all other visual elements (brain illustration, hands, circular border, 'Sisodiya Child Learning Centre' text) identical.",
+      "files": [
+        "frontend/src/components/SCLCLogo.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    }
+  ]
 }
