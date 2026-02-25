@@ -1,0 +1,39 @@
+{
+  "kind": "build_request",
+  "title": "Fix 'Ummeed' spelling across all pages",
+  "projectName": "Sisodiya Child Learning Centre",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Find and replace all incorrect or inconsistent spellings of 'Ummeed' (e.g., 'Ummid', 'Umeed', 'Umid', or any other variant) with the correct spelling 'Ummeed' across all frontend source files, including HeroSection.tsx, AboutSection.tsx, ServicesSection.tsx, ContactSection.tsx, Navigation.tsx, Footer.tsx, Home.tsx, App.tsx, index.html, and any other component or page that contains the tagline or references to 'Ek Nayi Ummeed'.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Change ummeed spelling to ummeed in the pages"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The string 'Ek Nayi Ummeed' appears consistently and correctly spelled in all locations where the tagline is displayed (Hero section, Navigation, Footer, About section, etc.).",
+        "No incorrect variants such as 'Ummid', 'Umeed', or 'Umid' remain anywhere in the frontend source files or rendered UI.",
+        "All visible page text, meta content, and component props referencing the tagline use the spelling 'Ummeed'."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter any other text, layout, or functionality — only fix the spelling of 'Ummeed'.",
+    "Do not modify files listed in frontend.immutablePaths."
+  ],
+  "nonGoals": [
+    "Redesigning or updating any visual elements.",
+    "Adding new sections or features.",
+    "Backend changes."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

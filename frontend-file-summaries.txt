@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with warm OKLCH color system (saffron orange primary, sage green accent, golden yellow, cream background), Nunito/Inter font imports, and utility classes for warm gradients and hero backgrounds.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Nunito heading font, Inter body font, warm/sage/golden color palettes, extended border-radius tokens, warm shadow utilities, and fade-up/float animations.",
+  "frontend/src/hooks/useQueries.ts": "React Query mutation hook for submitting contact form inquiries to the backend via the submitInquiry actor method.",
+  "frontend/src/components/Navigation.tsx": "Fixed top navigation bar using the new SCLCLogo SVG component (replacing the old photo), with smooth-scroll anchor links, mobile hamburger menu, and scroll-aware background blur.",
+  "frontend/src/components/HeroSection.tsx": "Full-screen hero section now featuring the new SCLCLogo SVG component prominently with a warm glow ring effect, alongside the center name, mission statement, director info, hero banner image, floating decorative elements, and CTA buttons.",
+  "frontend/src/components/AboutSection.tsx": "About Us section with mission story, director Prince Sisodiya quote card, four value cards (compassion, goals, holistic, family), and stats row.",
+  "frontend/src/components/ServicesSection.tsx": "Services & Therapies section with six therapy cards (Speech, Occupational, Physiotherapy, Behavioral, Special Education, Sensory Integration), section divider images, and a CTA banner.",
+  "frontend/src/components/ContactSection.tsx": "Contact section with four info cards, address highlight card, and a form (name/phone/email/message) that submits to the backend with loading/success/error states.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper composing Navigation, main content slot, and Footer for consistent page structure.",
+  "frontend/src/components/Footer.tsx": "Footer with the new SCLCLogo SVG component (white variant) in the brand column, a \"Download Logo (PDF)\" button via LogoDownloadButton, quick nav links, address, director name, copyright, and caffeine.ai attribution.",
+  "frontend/src/pages/Home.tsx": "Homepage composing HeroSection, AboutSection, ServicesSection, and ContactSection in order.",
+  "frontend/src/App.tsx": "Root app component wrapping the Home page in the Layout component.",
+  "frontend/src/components/SCLCLogo.tsx": "Reusable logo component for Sisodiya Child Learning Centre that renders the brain-care themed PNG image (`sclc-logo-v2.dim_400x400.png`). Supports `color` (default, with warm drop-shadow) and `white` (brightness/invert CSS filter for dark backgrounds) variants via the same prop interface as before.",
+  "frontend/src/components/LogoDownloadButton.tsx": "Download button component that opens a print-ready popup window containing the full SCLC SVG logo at 800×800 resolution with center name and tagline, then auto-triggers the browser print dialog so the user can save it as a PDF."
+}

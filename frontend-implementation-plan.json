@@ -1,0 +1,63 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix 'Ummeed' spelling across all pages",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Find and replace all incorrect or inconsistent spellings of 'Ummeed' with the correct spelling across all frontend source files",
+      "acceptanceCriteria": [
+        "The string 'Ek Nayi Ummeed' appears consistently and correctly spelled in all locations where the tagline is displayed (Hero section, Navigation, Footer, About section, etc.).",
+        "No incorrect variants such as 'Ummid', 'Umeed', or 'Umid' remain anywhere in the frontend source files or rendered UI.",
+        "All visible page text, meta content, and component props referencing the tagline use the spelling 'Ummeed'."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Review and correct any misspellings of 'Ummeed' in the tagline badge, ensuring it displays 'Ek Nayi Ummeed' consistently."
+        },
+        {
+          "path": "frontend/src/components/AboutSection.tsx",
+          "operation": "modify",
+          "description": "Search for and replace any incorrect variants of 'Ummeed' (such as 'Ummid', 'Umeed', 'Umid') with the correct spelling 'Ummeed' in all text content including mission statements and descriptive text."
+        },
+        {
+          "path": "frontend/src/components/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Check service descriptions and titles for any misspellings of 'Ummeed' and correct them to use the proper spelling."
+        },
+        {
+          "path": "frontend/src/components/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Review contact section text content for any incorrect spellings of 'Ummeed' and replace with the correct spelling."
+        },
+        {
+          "path": "frontend/src/components/Navigation.tsx",
+          "operation": "modify",
+          "description": "Ensure navigation links, labels, and any displayed text use the correct spelling 'Ummeed' throughout."
+        },
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "modify",
+          "description": "Check footer content including taglines, descriptions, and informational text for misspellings of 'Ummeed' and correct them."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Review Home page component for any text props or content containing 'Ummeed' variants and ensure correct spelling is used."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Check App component for any references to the tagline or 'Ummeed' and correct spelling if found."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Review HTML meta tags, title, and any inline text for misspellings of 'Ummeed' and ensure the correct spelling is used throughout."
+        }
+      ]
+    }
+  ]
+}

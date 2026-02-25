@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm cream background */
+    --background: 0.98 0.012 85;
+    --foreground: 0.22 0.04 45;
+
+    /* Card: soft warm white */
+    --card: 1 0.008 80;
+    --card-foreground: 0.22 0.04 45;
+
+    /* Popover */
+    --popover: 1 0.008 80;
+    --popover-foreground: 0.22 0.04 45;
+
+    /* Primary: warm saffron orange */
+    --primary: 0.65 0.18 48;
+    --primary-foreground: 1 0 0;
+
+    /* Secondary: soft golden yellow */
+    --secondary: 0.94 0.06 85;
+    --secondary-foreground: 0.35 0.08 50;
+
+    /* Muted: warm light gray */
+    --muted: 0.95 0.015 80;
+    --muted-foreground: 0.52 0.04 55;
+
+    /* Accent: calm sage green */
+    --accent: 0.88 0.06 145;
+    --accent-foreground: 0.28 0.08 145;
+
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border & Input */
+    --border: 0.88 0.025 75;
+    --input: 0.88 0.025 75;
+    --ring: 0.65 0.18 48;
+
+    /* Charts */
+    --chart-1: 0.65 0.18 48;
+    --chart-2: 0.72 0.15 145;
+    --chart-3: 0.78 0.14 85;
+    --chart-4: 0.60 0.16 30;
+    --chart-5: 0.55 0.12 200;
+
+    /* Sidebar */
+    --sidebar: 0.97 0.015 80;
+    --sidebar-foreground: 0.22 0.04 45;
+    --sidebar-primary: 0.65 0.18 48;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.88 0.06 145;
+    --sidebar-accent-foreground: 0.28 0.08 145;
+    --sidebar-border: 0.88 0.025 75;
+    --sidebar-ring: 0.65 0.18 48;
+  }
+
+  .dark {
+    --background: 0.16 0.03 45;
+    --foreground: 0.95 0.015 80;
+    --card: 0.20 0.03 45;
+    --card-foreground: 0.95 0.015 80;
+    --popover: 0.22 0.03 45;
+    --popover-foreground: 0.95 0.015 80;
+    --primary: 0.70 0.18 48;
+    --primary-foreground: 0.12 0.02 45;
+    --secondary: 0.28 0.04 50;
+    --secondary-foreground: 0.90 0.015 80;
+    --muted: 0.26 0.03 50;
+    --muted-foreground: 0.65 0.04 60;
+    --accent: 0.32 0.07 145;
+    --accent-foreground: 0.85 0.06 145;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.985 0 0;
+    --border: 1 0 0 / 12%;
+    --input: 1 0 0 / 15%;
+    --ring: 0.70 0.18 48;
+    --sidebar: 0.20 0.03 45;
+    --sidebar-foreground: 0.95 0.015 80;
+    --sidebar-primary: 0.70 0.18 48;
+    --sidebar-primary-foreground: 0.12 0.02 45;
+    --sidebar-accent: 0.32 0.07 145;
+    --sidebar-accent-foreground: 0.85 0.06 145;
+    --sidebar-border: 1 0 0 / 12%;
+    --sidebar-ring: 0.70 0.18 48;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-warm {
+    background: linear-gradient(135deg, oklch(0.65 0.18 48), oklch(0.72 0.15 65));
+  }
+  .gradient-hero {
+    background: linear-gradient(160deg, oklch(0.98 0.025 75) 0%, oklch(0.95 0.04 85) 50%, oklch(0.92 0.05 145 / 0.3) 100%);
+  }
+  .section-warm {
+    background: linear-gradient(180deg, oklch(0.98 0.012 85) 0%, oklch(0.96 0.02 80) 100%);
+  }
+}
