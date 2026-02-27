@@ -31,7 +31,7 @@ export default function SCLCLogo({ size = 120, className = '', variant = 'color'
       }}
     >
       <img
-        src="/assets/file_00000000a85c7207973708b82990330f (2)-4.png"
+        src="/assets/sclc-logo-original.png"
         alt="Sisodiya Child Learning Centre — Ek Nayi Ummeed"
         width={size}
         height={size}
