@@ -48,7 +48,7 @@ export default function Navigation() {
           >
             <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 drop-shadow-sm">
               <img
-                src="/assets/uploads/file_00000000a85c7207973708b82990330f-2-4-1-1.png"
+                src="/assets/uploads/file_00000000a85c7207973708b82990330f-2-4-2-1.png"
                 alt="Sisodiya Child Learning Centre Logo"
                 className="w-full h-full object-contain"
               />

@@ -23,7 +23,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-14 h-14 flex-shrink-0 bg-white rounded-xl p-1">
                 <img
-                  src="/assets/uploads/file_00000000a85c7207973708b82990330f-2-4-1-1.png"
+                  src="/assets/uploads/file_00000000a85c7207973708b82990330f-2-4-2-1.png"
                   alt="Sisodiya Child Learning Centre Logo"
                   className="w-full h-full object-contain"
                   onError={(e) => {
