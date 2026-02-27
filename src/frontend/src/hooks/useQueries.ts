@@ -1,5 +1,5 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { useActor } from './useActor';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useActor } from "./useActor";
 
 export function useSubmitInquiry() {
   const { actor } = useActor();
@@ -15,11 +15,11 @@ export function useSubmitInquiry() {
       phone: string;
       message: string;
     }) => {
-      if (!actor) throw new Error('Actor not available');
+      if (!actor) throw new Error("Actor not available");
       return actor.submitInquiry(name, phone, message);
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['inquiries'] });
+      queryClient.invalidateQueries({ queryKey: ["inquiries"] });
     },
   });
 }

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 interface SCLCLogoProps {
   size?: number;
   className?: string;
-  variant?: 'color' | 'white';
+  variant?: "color" | "white";
 }
 
 /**
@@ -13,21 +13,25 @@ interface SCLCLogoProps {
  * The 'white' variant keeps the full-color logo intact but adds a white circular background
  * so it remains visible on dark backgrounds.
  */
-export default function SCLCLogo({ size = 120, className = '', variant = 'color' }: SCLCLogoProps) {
-  const isWhite = variant === 'white';
+export default function SCLCLogo({
+  size = 120,
+  className = "",
+  variant = "color",
+}: SCLCLogoProps) {
+  const isWhite = variant === "white";
 
   return (
     <div
       className={className}
       style={{
-        display: 'inline-block',
+        display: "inline-block",
         width: size,
         height: size,
         flexShrink: 0,
-        borderRadius: '50%',
-        background: isWhite ? '#ffffff' : 'transparent',
+        borderRadius: "50%",
+        background: isWhite ? "#ffffff" : "transparent",
         padding: isWhite ? Math.round(size * 0.04) : 0,
-        boxSizing: 'border-box',
+        boxSizing: "border-box",
       }}
     >
       <img
@@ -36,14 +40,14 @@ export default function SCLCLogo({ size = 120, className = '', variant = 'color'
         width={size}
         height={size}
         style={{
-          width: '100%',
-          height: '100%',
-          objectFit: 'contain',
-          display: 'block',
-          borderRadius: '50%',
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+          display: "block",
+          borderRadius: "50%",
           filter: isWhite
-            ? 'none'
-            : 'drop-shadow(0 2px 6px rgba(120,60,20,0.18))',
+            ? "none"
+            : "drop-shadow(0 2px 6px rgba(120,60,20,0.18))",
         }}
       />
     </div>

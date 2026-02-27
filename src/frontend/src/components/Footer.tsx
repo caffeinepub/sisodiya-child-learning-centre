@@ -1,16 +1,17 @@
-import { MapPin, Heart, Phone, MessageCircle, Mail } from 'lucide-react';
-import SCLCLogo from './SCLCLogo';
-import LogoDownloadButton from './LogoDownloadButton';
+import { Heart, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import LogoDownloadButton from "./LogoDownloadButton";
 
-const CENTRE_EMAIL = 'sisodiyachildlearningcentre@gmail.com';
+const CENTRE_EMAIL = "sisodiyachildlearningcentre@gmail.com";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const appId = encodeURIComponent(window.location.hostname || 'sisodiya-child-learning-centre');
+  const appId = encodeURIComponent(
+    window.location.hostname || "sisodiya-child-learning-centre",
+  );
 
   const handleNavClick = (href: string) => {
     const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -20,19 +21,29 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-14 h-14 flex-shrink-0">
-                <SCLCLogo size={56} variant="white" />
+              <div className="w-14 h-14 flex-shrink-0 bg-white rounded-xl p-1">
+                <img
+                  src="/assets/uploads/file_00000000a85c7207973708b82990330f-2-4-1-1.png"
+                  alt="Sisodiya Child Learning Centre Logo"
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
               </div>
               <div>
                 <p className="font-heading font-800 text-sm text-background leading-tight">
                   Sisodiya Child Learning Centre
                 </p>
-                <p className="font-heading text-xs text-background/60 italic">Ek Nayi Ummeed</p>
+                <p className="font-heading text-xs text-background/60 italic">
+                  Ek Nayi Ummeed
+                </p>
               </div>
             </div>
             <p className="font-body text-sm text-background/70 leading-relaxed mb-4">
-              An integrated therapy centre dedicated to nurturing the potential of
-              children with special needs through compassionate, evidence-based care.
+              An integrated therapy centre dedicated to nurturing the potential
+              of children with special needs through compassionate,
+              evidence-based care.
             </p>
             {/* Logo Download Button */}
             <LogoDownloadButton />
@@ -45,10 +56,10 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                { label: 'Home', href: '#home' },
-                { label: 'About Us', href: '#about' },
-                { label: 'Services & Therapies', href: '#services' },
-                { label: 'Contact Us', href: '#contact' },
+                { label: "Home", href: "#home" },
+                { label: "About Us", href: "#about" },
+                { label: "Services & Therapies", href: "#services" },
+                { label: "Contact Us", href: "#contact" },
               ].map((link) => (
                 <li key={link.href}>
                   <button
@@ -74,7 +85,9 @@ export default function Footer() {
               <MapPin className="w-4 h-4 text-warm-400 mt-0.5 flex-shrink-0" />
               <div>
                 <p className="font-body text-sm text-background/70">Sector 5</p>
-                <p className="font-body text-sm text-background/70">Gurugram, Haryana – 122001</p>
+                <p className="font-body text-sm text-background/70">
+                  Gurugram, Haryana – 122001
+                </p>
               </div>
             </div>
 
@@ -114,9 +127,15 @@ export default function Footer() {
             </div>
 
             <div className="pt-3 border-t border-background/10">
-              <p className="font-heading font-700 text-sm text-background">Director</p>
-              <p className="font-body text-sm text-background/70">Prince Sisodiya</p>
-              <p className="font-body text-xs text-background/50 mt-1">Mon–Sat: 9 AM – 6 PM</p>
+              <p className="font-heading font-700 text-sm text-background">
+                Director
+              </p>
+              <p className="font-body text-sm text-background/70">
+                Prince Sisodiya
+              </p>
+              <p className="font-body text-xs text-background/50 mt-1">
+                Mon–Sat: 9 AM – 6 PM
+              </p>
             </div>
           </div>
         </div>
@@ -127,9 +146,9 @@ export default function Footer() {
             © {year} Sisodiya Child Learning Centre. All rights reserved.
           </p>
           <p className="font-body text-xs text-background/50 flex items-center gap-1">
-            Built with{' '}
-            <Heart className="w-3 h-3 text-warm-400 fill-warm-400 inline" />{' '}
-            using{' '}
+            Built with{" "}
+            <Heart className="w-3 h-3 text-warm-400 fill-warm-400 inline" />{" "}
+            using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appId}`}
               target="_blank"

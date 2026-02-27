@@ -1,16 +1,18 @@
-import React from 'react';
-import { Download } from 'lucide-react';
+import { Download } from "lucide-react";
+import React from "react";
 
 /**
  * Download button that opens a print-ready popup window containing the official SCLC logo
  * image (circular logo with brain, hands, and 'EK NAYI UMMEED' text), then auto-triggers
  * the browser print dialog so the user can save it as a PDF.
  */
-export default function LogoDownloadButton({ className = '' }: { className?: string }) {
+export default function LogoDownloadButton({
+  className = "",
+}: { className?: string }) {
   const handleDownload = () => {
-    const printWindow = window.open('', '_blank', 'width=900,height=900');
+    const printWindow = window.open("", "_blank", "width=900,height=900");
     if (!printWindow) {
-      alert('Please allow popups to download the logo PDF.');
+      alert("Please allow popups to download the logo PDF.");
       return;
     }
 
@@ -78,6 +80,7 @@ export default function LogoDownloadButton({ className = '' }: { className?: str
 
   return (
     <button
+      type="button"
       onClick={handleDownload}
       className={`inline-flex items-center gap-2 text-sm font-heading font-600 text-background/70 hover:text-background transition-colors group ${className}`}
       title="Download Logo as PDF"

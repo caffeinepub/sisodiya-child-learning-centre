@@ -1,71 +1,96 @@
-import { Mic, Hand, Brain, BookOpen, Users, Star, Gift, Home, Monitor } from 'lucide-react';
+import {
+  BookOpen,
+  Brain,
+  Gift,
+  Hand,
+  Home,
+  Mic,
+  Monitor,
+  ShieldCheck,
+  Star,
+  Users,
+} from "lucide-react";
 
 const services = [
   {
     icon: Hand,
-    title: 'Occupational Therapy',
-    tag: 'Motor Skills',
-    color: 'text-sage-500',
-    bg: 'bg-sage-100',
-    border: 'border-sage-200',
+    title: "Occupational Therapy",
+    tag: "Motor Skills",
+    color: "text-sage-500",
+    bg: "bg-sage-100",
+    border: "border-sage-200",
     items: [
-      'Sensory Integration',
-      'Fine & Gross Motor Skills',
-      'Handwriting Improvement',
-      'Daily Living Skills',
+      "Sensory Integration",
+      "Fine & Gross Motor Skills",
+      "Handwriting Improvement",
+      "Daily Living Skills",
     ],
   },
   {
     icon: Mic,
-    title: 'Speech Therapy',
-    tag: 'Communication',
-    color: 'text-warm-500',
-    bg: 'bg-warm-100',
-    border: 'border-warm-200',
+    title: "Speech Therapy",
+    tag: "Communication",
+    color: "text-warm-500",
+    bg: "bg-warm-100",
+    border: "border-warm-200",
     items: [
-      'Speech Clarity',
-      'Language Development',
-      'Oral Motor Exercises',
-      'Communication Skills',
+      "Speech Clarity",
+      "Language Development",
+      "Oral Motor Exercises",
+      "Communication Skills",
     ],
   },
   {
     icon: Brain,
-    title: 'ABA Therapy',
-    tag: 'Behavioral',
-    color: 'text-warm-600',
-    bg: 'bg-warm-50',
-    border: 'border-warm-200',
+    title: "ABA Therapy",
+    tag: "Behavioral",
+    color: "text-warm-600",
+    bg: "bg-warm-50",
+    border: "border-warm-200",
     items: [
-      'Behavior Modification',
-      'Attention & Focus Improvement',
-      'Skill Development Programs',
+      "Behavior Modification",
+      "Attention & Focus Improvement",
+      "Skill Development Programs",
     ],
   },
   {
     icon: BookOpen,
-    title: 'Special Education',
-    tag: 'Education',
-    color: 'text-sage-600',
-    bg: 'bg-sage-50',
-    border: 'border-sage-200',
+    title: "Special Education",
+    tag: "Education",
+    color: "text-sage-600",
+    bg: "bg-sage-50",
+    border: "border-sage-200",
     items: [
-      'Individual Learning Plans',
-      'Academic Support',
-      'Reading & Writing Skills',
+      "Individual Learning Plans",
+      "Academic Support",
+      "Reading & Writing Skills",
     ],
   },
   {
     icon: Users,
-    title: 'Group Therapy',
-    tag: 'Social Skills',
-    color: 'text-golden-600',
-    bg: 'bg-golden-50',
-    border: 'border-golden-200',
+    title: "Group Therapy",
+    tag: "Social Skills",
+    color: "text-golden-600",
+    bg: "bg-golden-50",
+    border: "border-golden-200",
     items: [
-      'Social Interaction',
-      'Communication Practice',
-      'Confidence Building',
+      "Social Interaction",
+      "Communication Practice",
+      "Confidence Building",
+    ],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Behavioral Therapy",
+    tag: "Behavior",
+    color: "text-sage-600",
+    bg: "bg-sage-50",
+    border: "border-sage-200",
+    items: [
+      "Positive Behavior Support",
+      "Emotional Regulation",
+      "Social Skills Training",
+      "Parent Behavior Coaching",
     ],
   },
 ];
@@ -88,15 +113,17 @@ export default function ServicesSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-warm-100 border border-warm-200 rounded-full px-4 py-1.5 mb-4">
             <Star className="w-3.5 h-3.5 text-warm-500 fill-warm-400" />
-            <span className="font-heading font-700 text-sm text-warm-600">Our Services</span>
+            <span className="font-heading font-700 text-sm text-warm-600">
+              Our Services
+            </span>
           </div>
           <h2 className="font-heading font-900 text-3xl sm:text-4xl md:text-5xl text-foreground mb-4">
-            Therapies &{' '}
-            <span className="text-primary">Programs</span>
+            Therapies & <span className="text-primary">Programs</span>
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
-            Our integrated approach combines multiple therapy disciplines to provide
-            comprehensive, holistic care for children with special needs.
+            Our integrated approach combines multiple therapy disciplines to
+            provide comprehensive, holistic care for children with special
+            needs.
           </p>
         </div>
 
@@ -108,10 +135,13 @@ export default function ServicesSection() {
               <Home className="w-7 h-7 text-white" />
             </div>
             <div className="text-center sm:text-left">
-              <p className="font-heading font-800 text-lg text-white mb-1">🏡 Home Sessions Available</p>
+              <p className="font-heading font-800 text-lg text-white mb-1">
+                🏡 Home Sessions Available
+              </p>
               <p className="font-body text-sm text-white/85">
-                We provide home-based therapy sessions for children who require therapy at home.
-                Our therapists come to you for a comfortable, familiar environment.
+                We provide home-based therapy sessions for children who require
+                therapy at home. Our therapists come to you for a comfortable,
+                familiar environment.
               </p>
             </div>
           </div>
@@ -122,10 +152,12 @@ export default function ServicesSection() {
               <Monitor className="w-7 h-7 text-white" />
             </div>
             <div className="text-center sm:text-left">
-              <p className="font-heading font-800 text-lg text-white mb-1">💻 Online Sessions Available</p>
+              <p className="font-heading font-800 text-lg text-white mb-1">
+                💻 Online Sessions Available
+              </p>
               <p className="font-body text-sm text-white/85">
-                Can't visit in person? We offer online therapy sessions via video call
-                so your child can receive expert care from anywhere.
+                Can't visit in person? We offer online therapy sessions via
+                video call so your child can receive expert care from anywhere.
               </p>
             </div>
           </div>
@@ -142,10 +174,14 @@ export default function ServicesSection() {
               >
                 {/* Icon & Tag */}
                 <div className="flex items-start justify-between mb-5">
-                  <div className={`w-14 h-14 rounded-2xl ${service.bg} flex items-center justify-center shadow-xs`}>
+                  <div
+                    className={`w-14 h-14 rounded-2xl ${service.bg} flex items-center justify-center shadow-xs`}
+                  >
                     <Icon className={`w-7 h-7 ${service.color}`} />
                   </div>
-                  <span className={`text-xs font-heading font-700 px-3 py-1 rounded-full ${service.bg} ${service.color} border ${service.border}`}>
+                  <span
+                    className={`text-xs font-heading font-700 px-3 py-1 rounded-full ${service.bg} ${service.color} border ${service.border}`}
+                  >
                     {service.tag}
                   </span>
                 </div>
@@ -159,8 +195,12 @@ export default function ServicesSection() {
                 <ul className="space-y-1.5">
                   {service.items.map((item) => (
                     <li key={item} className="flex items-center gap-2">
-                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${service.color.replace('text-', 'bg-')}`} />
-                      <span className="font-body text-sm text-muted-foreground">{item}</span>
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${service.color.replace("text-", "bg-")}`}
+                      />
+                      <span className="font-body text-sm text-muted-foreground">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -188,10 +228,12 @@ export default function ServicesSection() {
               Free Assessment
             </h3>
             <p className="font-body text-sm text-white/90 leading-relaxed mb-3">
-              Not sure which therapy your child needs? Book a free assessment with our expert team.
+              Not sure which therapy your child needs? Book a free assessment
+              with our expert team.
             </p>
             <p className="font-body text-xs text-white/80">
-              Comprehensive evaluation to recommend the most suitable therapy plan for your child's unique needs.
+              Comprehensive evaluation to recommend the most suitable therapy
+              plan for your child's unique needs.
             </p>
           </div>
         </div>
@@ -202,13 +244,15 @@ export default function ServicesSection() {
             Not Sure Which Therapy Your Child Needs?
           </h3>
           <p className="font-body text-white/85 text-base mb-6 max-w-xl mx-auto">
-            Our expert team will conduct a comprehensive assessment and recommend
-            the most suitable therapy plan for your child's unique needs.
+            Our expert team will conduct a comprehensive assessment and
+            recommend the most suitable therapy plan for your child's unique
+            needs.
           </p>
           <button
+            type="button"
             onClick={() => {
-              const el = document.querySelector('#contact');
-              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              const el = document.querySelector("#contact");
+              if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
             }}
             className="inline-flex items-center gap-2 bg-white text-warm-600 hover:bg-warm-50 font-heading font-700 text-base px-8 py-3 rounded-2xl transition-colors shadow-warm"
           >

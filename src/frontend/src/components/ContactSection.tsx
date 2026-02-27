@@ -1,10 +1,19 @@
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, CheckCircle, AlertCircle, Loader2, MessageCircle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useSubmitInquiry } from '@/hooks/useQueries';
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { useSubmitInquiry } from "@/hooks/useQueries";
+import {
+  AlertCircle,
+  CheckCircle,
+  Clock,
+  Loader2,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
+import { useState } from "react";
 
 interface FormData {
   name: string;
@@ -12,16 +21,23 @@ interface FormData {
   message: string;
 }
 
-const initialForm: FormData = { name: '', phone: '', message: '' };
+const initialForm: FormData = { name: "", phone: "", message: "" };
 
-const CENTRE_EMAIL = 'sisodiyachildlearningcentre@gmail.com';
+const CENTRE_EMAIL = "sisodiyachildlearningcentre@gmail.com";
 
 export default function ContactSection() {
   const [form, setForm] = useState<FormData>(initialForm);
   const [submitted, setSubmitted] = useState(false);
-  const { mutate: submitInquiry, isPending, isError, error } = useSubmitInquiry();
+  const {
+    mutate: submitInquiry,
+    isPending,
+    isError,
+    error,
+  } = useSubmitInquiry();
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -36,7 +52,7 @@ export default function ContactSection() {
           setSubmitted(true);
           setForm(initialForm);
         },
-      }
+      },
     );
   };
 
@@ -47,11 +63,12 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-warm-100 border border-warm-200 rounded-full px-4 py-1.5 mb-4">
             <MapPin className="w-3.5 h-3.5 text-warm-500" />
-            <span className="font-heading font-700 text-sm text-warm-600">Contact Us</span>
+            <span className="font-heading font-700 text-sm text-warm-600">
+              Contact Us
+            </span>
           </div>
           <h2 className="font-heading font-900 text-3xl sm:text-4xl md:text-5xl text-foreground mb-4">
-            Get in{' '}
-            <span className="text-primary">Touch</span>
+            Get in <span className="text-primary">Touch</span>
           </h2>
           <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
             We'd love to hear from you. Reach out to us for appointments,
@@ -69,9 +86,15 @@ export default function ContactSection() {
                 <div className="w-10 h-10 rounded-xl bg-warm-100 flex items-center justify-center mb-3">
                   <MapPin className="w-5 h-5 text-warm-500" />
                 </div>
-                <p className="font-heading font-700 text-sm text-foreground mb-1">Our Address</p>
-                <p className="font-body text-sm text-muted-foreground">Sector 5</p>
-                <p className="font-body text-sm text-muted-foreground">Gurugram, Haryana – 122001</p>
+                <p className="font-heading font-700 text-sm text-foreground mb-1">
+                  Our Address
+                </p>
+                <p className="font-body text-sm text-muted-foreground">
+                  LG-382, Sector 5
+                </p>
+                <p className="font-body text-sm text-muted-foreground">
+                  Gurugram, Haryana – 122001
+                </p>
               </div>
 
               {/* Working Hours */}
@@ -79,10 +102,18 @@ export default function ContactSection() {
                 <div className="w-10 h-10 rounded-xl bg-sage-100 flex items-center justify-center mb-3">
                   <Clock className="w-5 h-5 text-sage-500" />
                 </div>
-                <p className="font-heading font-700 text-sm text-foreground mb-1">Working Hours</p>
-                <p className="font-body text-sm text-muted-foreground">Monday – Saturday</p>
-                <p className="font-body text-sm text-muted-foreground">9:00 AM – 6:00 PM</p>
-                <p className="font-body text-xs text-warm-500 font-600 mt-1">Closed on Sundays</p>
+                <p className="font-heading font-700 text-sm text-foreground mb-1">
+                  Working Hours
+                </p>
+                <p className="font-body text-sm text-muted-foreground">
+                  Monday – Saturday
+                </p>
+                <p className="font-body text-sm text-muted-foreground">
+                  9:00 AM – 6:00 PM
+                </p>
+                <p className="font-body text-xs text-warm-500 font-600 mt-1">
+                  Closed on Sundays
+                </p>
               </div>
 
               {/* Phone */}
@@ -90,14 +121,18 @@ export default function ContactSection() {
                 <div className="w-10 h-10 rounded-xl bg-warm-50 flex items-center justify-center mb-3 border border-warm-200">
                   <Phone className="w-5 h-5 text-warm-600" />
                 </div>
-                <p className="font-heading font-700 text-sm text-foreground mb-1">Call Us</p>
+                <p className="font-heading font-700 text-sm text-foreground mb-1">
+                  Call Us
+                </p>
                 <a
                   href="tel:6376544185"
                   className="font-body text-sm text-primary hover:text-warm-600 transition-colors font-600"
                 >
                   6376544185
                 </a>
-                <p className="font-body text-xs text-muted-foreground mt-0.5">For appointments & inquiries</p>
+                <p className="font-body text-xs text-muted-foreground mt-0.5">
+                  For appointments & inquiries
+                </p>
               </div>
 
               {/* Email */}
@@ -105,14 +140,18 @@ export default function ContactSection() {
                 <div className="w-10 h-10 rounded-xl bg-golden-100 flex items-center justify-center mb-3">
                   <Mail className="w-5 h-5 text-golden-500" />
                 </div>
-                <p className="font-heading font-700 text-sm text-foreground mb-1">Email Us</p>
+                <p className="font-heading font-700 text-sm text-foreground mb-1">
+                  Email Us
+                </p>
                 <a
                   href={`mailto:${CENTRE_EMAIL}`}
                   className="font-body text-sm text-primary hover:text-warm-600 transition-colors font-600 break-all"
                 >
                   {CENTRE_EMAIL}
                 </a>
-                <p className="font-body text-xs text-muted-foreground mt-0.5">We respond within 24 hours</p>
+                <p className="font-body text-xs text-muted-foreground mt-0.5">
+                  We respond within 24 hours
+                </p>
               </div>
             </div>
 
@@ -127,8 +166,12 @@ export default function ContactSection() {
                 <MessageCircle className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="font-heading font-800 text-base text-white">Chat on WhatsApp</p>
-                <p className="font-body text-sm text-white/85">Business: 9784986081 — Quick replies!</p>
+                <p className="font-heading font-800 text-base text-white">
+                  Chat on WhatsApp
+                </p>
+                <p className="font-body text-sm text-white/85">
+                  Business: 9784986081 — Quick replies!
+                </p>
               </div>
               <div className="ml-auto">
                 <span className="font-heading font-700 text-xs text-white/80 bg-white/20 px-3 py-1 rounded-full">
@@ -137,26 +180,92 @@ export default function ContactSection() {
               </div>
             </a>
 
-            {/* Map placeholder / Address highlight */}
-            <div className="bg-gradient-to-br from-warm-500 to-warm-600 rounded-4xl p-7 text-white shadow-warm-lg">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center flex-shrink-0 mt-1">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <p className="font-heading font-800 text-lg text-white mb-1">Visit Us</p>
-                  <p className="font-heading font-700 text-base text-white/90">
-                    Sisodiya Child Learning Centre
-                  </p>
-                  <p className="font-body text-sm text-white/80 mt-1">Sector 5</p>
-                  <p className="font-body text-sm text-white/80">Gurugram, Haryana – 122001</p>
-                  <div className="mt-4 pt-4 border-t border-white/20">
-                    <p className="font-body text-xs text-white/70">
-                      Monday to Saturday: 9 AM – 6 PM &nbsp;|&nbsp; Closed on Sundays
-                    </p>
-                  </div>
-                </div>
+            {/* Google Business Profile Banner */}
+            <div className="bg-white border border-warm-200 rounded-3xl p-4 mb-4 flex items-center gap-4 shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-warm-50 border border-warm-100 flex items-center justify-center flex-shrink-0">
+                <span
+                  className="font-heading font-900 text-xl"
+                  style={{
+                    background:
+                      "linear-gradient(135deg,#4285F4 0%,#EA4335 33%,#FBBC05 66%,#34A853 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  G
+                </span>
               </div>
+              <div className="flex-1 min-w-0">
+                <p className="font-heading font-700 text-sm text-foreground">
+                  Google Business Profile
+                </p>
+                <p className="font-body text-xs text-muted-foreground">
+                  Find us, see reviews & get directions
+                </p>
+              </div>
+              <a
+                href="https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+Sector+5+Gurugram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-heading font-700 text-xs text-warm-600 bg-warm-100 hover:bg-warm-200 border border-warm-200 px-3 py-1.5 rounded-xl transition-colors whitespace-nowrap"
+              >
+                View Profile →
+              </a>
+            </div>
+
+            {/* Google Map */}
+            <div className="rounded-4xl overflow-hidden shadow-warm border border-warm-100">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3509.1!2d76.9988!3d28.4583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18ef04c3b317%3A0x8b7a5dde29bb56ea!2sSector%205%2C%20Gurugram%2C%20Haryana%20122001!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin"
+                width="100%"
+                height="320"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Sisodiya Child Learning Centre Location — LG-382, Sector 5, Gurugram"
+              />
+            </div>
+            {/* Address row below map */}
+            <div className="flex items-center gap-3 bg-warm-50 rounded-2xl px-4 py-3 border border-warm-100 mt-3">
+              <MapPin className="w-4 h-4 text-warm-500 flex-shrink-0" />
+              <p className="font-body text-sm text-muted-foreground">
+                LG-382, Sector 5, Gurugram, Haryana – 122001 &nbsp;|&nbsp;
+                Mon–Sat: 9 AM – 6 PM
+              </p>
+            </div>
+            {/* Get Directions + Google Maps Buttons */}
+            <div className="flex flex-col sm:flex-row gap-2 mt-3">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=LG-382+Sector+5+Gurugram+Haryana+122001"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-warm-100 hover:bg-warm-200 border border-warm-200 text-warm-700 font-heading font-700 text-sm px-5 py-2.5 rounded-xl transition-colors flex-1 justify-center"
+              >
+                <MapPin className="w-4 h-4" />
+                Get Directions
+              </a>
+              <a
+                href="https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+Sector+5+Gurugram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white hover:bg-warm-50 border border-warm-200 text-warm-700 font-heading font-700 text-sm px-5 py-2.5 rounded-xl transition-colors flex-1 justify-center"
+              >
+                <span
+                  className="font-heading font-900 text-sm"
+                  style={{
+                    background:
+                      "linear-gradient(90deg,#4285F4 0%,#EA4335 33%,#FBBC05 66%,#34A853 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  G
+                </span>
+                View on Google Maps
+              </a>
             </div>
           </div>
 
@@ -172,7 +281,8 @@ export default function ContactSection() {
                 </h3>
                 <p className="font-body text-base text-muted-foreground mb-6 max-w-sm">
                   Your inquiry has been received. Our team will get back to you
-                  within 24 hours. We look forward to supporting your child's journey!
+                  within 24 hours. We look forward to supporting your child's
+                  journey!
                 </p>
                 <Button
                   onClick={() => setSubmitted(false)}
@@ -190,7 +300,10 @@ export default function ContactSection() {
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <Label htmlFor="name" className="font-heading font-600 text-sm text-foreground">
+                      <Label
+                        htmlFor="name"
+                        className="font-heading font-600 text-sm text-foreground"
+                      >
                         Full Name <span className="text-warm-500">*</span>
                       </Label>
                       <Input
@@ -204,7 +317,10 @@ export default function ContactSection() {
                       />
                     </div>
                     <div className="space-y-1.5">
-                      <Label htmlFor="phone" className="font-heading font-600 text-sm text-foreground">
+                      <Label
+                        htmlFor="phone"
+                        className="font-heading font-600 text-sm text-foreground"
+                      >
                         Phone Number <span className="text-warm-500">*</span>
                       </Label>
                       <Input
@@ -220,7 +336,10 @@ export default function ContactSection() {
                   </div>
 
                   <div className="space-y-1.5">
-                    <Label htmlFor="message" className="font-heading font-600 text-sm text-foreground">
+                    <Label
+                      htmlFor="message"
+                      className="font-heading font-600 text-sm text-foreground"
+                    >
                       Message <span className="text-warm-500">*</span>
                     </Label>
                     <Textarea
@@ -239,7 +358,9 @@ export default function ContactSection() {
                     <div className="flex items-center gap-2 text-destructive bg-destructive/10 rounded-xl px-4 py-3">
                       <AlertCircle className="w-4 h-4 flex-shrink-0" />
                       <p className="font-body text-sm">
-                        {error instanceof Error ? error.message : 'Something went wrong. Please try again.'}
+                        {error instanceof Error
+                          ? error.message
+                          : "Something went wrong. Please try again."}
                       </p>
                     </div>
                   )}
@@ -255,12 +376,12 @@ export default function ContactSection() {
                         Sending…
                       </>
                     ) : (
-                      'Send Message'
+                      "Send Message"
                     )}
                   </Button>
 
                   <p className="font-body text-xs text-muted-foreground text-center">
-                    Or email us directly at{' '}
+                    Or email us directly at{" "}
                     <a
                       href={`mailto:${CENTRE_EMAIL}`}
                       className="text-primary hover:text-warm-600 transition-colors font-600"
