@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Sparkles, Star } from "lucide-react";
-import SCLCLogo from "./SCLCLogo";
 
 export default function HeroSection() {
   const handleScroll = (href: string) => {
@@ -51,7 +50,11 @@ export default function HeroSection() {
                 {/* Glow ring behind logo */}
                 <div className="absolute inset-0 rounded-full bg-warm-300/30 blur-xl scale-110 pointer-events-none" />
                 <div className="relative w-36 h-36 sm:w-40 sm:h-40 drop-shadow-xl">
-                  <SCLCLogo size={160} />
+                  <img
+                    src="/assets/sclc-logo-main.png"
+                    alt="Sisodiya Child Learning Centre Logo"
+                    className="w-full h-full object-contain"
+                  />
                 </div>
               </div>
             </div>
