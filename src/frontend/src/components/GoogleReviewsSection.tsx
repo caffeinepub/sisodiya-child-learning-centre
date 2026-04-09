@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink, MapPin, Phone, Star } from "lucide-react";
 
 const WRITE_REVIEW_URL =
   "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+Sector+5+Gurugram#lrd=0x0:0x0,3";
 const ALL_REVIEWS_URL =
-  "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+Sector+5+Gurugram";
+  "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+LG-382+Sector+5+Gurugram+Haryana+122001";
 const GOOGLE_BUSINESS_URL =
   "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+LG-382+Sector+5+Gurugram+Haryana+122001";
 
@@ -65,12 +65,19 @@ const reviews = [
   },
 ];
 
-// Google G icon using colored letters
-function GoogleGIcon() {
+function GoogleGIcon({ size = "sm" }: { size?: "sm" | "md" | "lg" }) {
+  const cls =
+    size === "lg"
+      ? "w-10 h-10 text-xl"
+      : size === "md"
+        ? "w-7 h-7 text-sm"
+        : "w-5 h-5 text-xs";
   return (
-    <span className="inline-flex items-center justify-center w-7 h-7 rounded-full border-2 border-warm-200 bg-white shadow-xs select-none">
+    <span
+      className={`inline-flex items-center justify-center ${cls} rounded-full border-2 border-warm-200 bg-white shadow-xs select-none flex-shrink-0`}
+    >
       <span
-        className="font-heading font-900 text-sm leading-none"
+        className="font-heading font-900 leading-none"
         style={{
           background:
             "linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%)",
@@ -89,6 +96,92 @@ export default function GoogleReviewsSection() {
   return (
     <section id="google-reviews" className="py-20 md:py-28 section-warm">
       <div className="container mx-auto px-4 sm:px-6">
+        {/* ── Prominent Google Business Banner ── */}
+        <div className="mb-16 rounded-3xl overflow-hidden border border-warm-200 shadow-card bg-white">
+          {/* Banner Header */}
+          <div className="bg-gradient-to-r from-warm-500 to-warm-600 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-3">
+              <GoogleGIcon size="md" />
+              <div>
+                <p className="font-heading font-800 text-base text-white">
+                  हमें Google पर खोजें
+                </p>
+                <p className="font-body text-xs text-white/80">
+                  Find us on Google Business Profile
+                </p>
+              </div>
+            </div>
+            <a
+              href={GOOGLE_BUSINESS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-ocid="google_business.primary_button"
+            >
+              <Button className="bg-white text-warm-700 hover:bg-warm-50 rounded-xl font-heading font-700 text-sm gap-2 shadow-none">
+                <ExternalLink className="w-4 h-4" />
+                Open Google Business Profile
+              </Button>
+            </a>
+          </div>
+
+          {/* Business Details */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-warm-100">
+            <div className="px-6 py-5">
+              <p className="font-heading font-800 text-sm text-foreground mb-1">
+                Sisodiya Child Learning Centre
+              </p>
+              <p className="font-body text-xs text-muted-foreground">
+                An Integrated Therapy Centre for Children with Special Needs
+              </p>
+            </div>
+
+            <div className="px-6 py-5 flex items-start gap-2">
+              <MapPin className="w-4 h-4 text-warm-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-heading font-700 text-xs text-foreground mb-0.5">
+                  Address
+                </p>
+                <p className="font-body text-xs text-muted-foreground">
+                  LG-382, Sector 5, Gurugram
+                </p>
+                <p className="font-body text-xs text-muted-foreground">
+                  Haryana – 122001
+                </p>
+              </div>
+            </div>
+
+            <div className="px-6 py-5">
+              <p className="font-heading font-700 text-xs text-foreground mb-1">
+                🕒 Business Hours
+              </p>
+              <p className="font-body text-xs text-muted-foreground">
+                Mon – Sat: 9:00 AM – 6:00 PM
+              </p>
+              <p className="font-body text-xs text-muted-foreground">
+                Sunday: Closed
+              </p>
+            </div>
+
+            <div className="px-6 py-5 flex items-start gap-2">
+              <Phone className="w-4 h-4 text-warm-500 mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-heading font-700 text-xs text-foreground mb-0.5">
+                  Phone
+                </p>
+                <a
+                  href="tel:6376544185"
+                  className="font-body text-xs text-warm-600 hover:text-warm-700 transition-colors"
+                >
+                  6376544185
+                </a>
+                <p className="font-body text-xs text-muted-foreground mt-0.5">
+                  WhatsApp: 9784986081
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Section Header */}
         <div className="text-center mb-14">
           <div className="inline-flex items-center gap-2 bg-white border border-warm-200 rounded-full px-4 py-1.5 mb-4 shadow-xs">
@@ -173,6 +266,7 @@ export default function GoogleReviewsSection() {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-warm-50 hover:bg-warm-100 border border-warm-200 text-warm-700 font-heading font-700 text-xs px-4 py-2 rounded-xl transition-colors"
+              data-ocid="google_business.link"
             >
               <ExternalLink className="w-3.5 h-3.5" />
               View on Google Maps
@@ -182,10 +276,11 @@ export default function GoogleReviewsSection() {
 
         {/* Reviews Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-          {reviews.map((r) => (
+          {reviews.map((r, i) => (
             <div
               key={r.name}
               className="bg-white rounded-3xl p-6 border border-warm-100 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 flex flex-col gap-4"
+              data-ocid={`google_reviews.item.${i + 1}`}
             >
               {/* Reviewer Info */}
               <div className="flex items-center gap-3">
@@ -235,7 +330,10 @@ export default function GoogleReviewsSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <a href={WRITE_REVIEW_URL} target="_blank" rel="noopener noreferrer">
-            <Button className="bg-primary text-primary-foreground hover:bg-warm-600 rounded-xl font-heading font-700 shadow-warm px-6 py-3 text-base gap-2">
+            <Button
+              className="bg-primary text-primary-foreground hover:bg-warm-600 rounded-xl font-heading font-700 shadow-warm px-6 py-3 text-base gap-2"
+              data-ocid="google_reviews.primary_button"
+            >
               <Star className="w-4 h-4 fill-white" />
               Write a Review on Google
               <ExternalLink className="w-4 h-4" />
@@ -245,6 +343,7 @@ export default function GoogleReviewsSection() {
             <Button
               variant="outline"
               className="border-warm-300 text-warm-700 hover:bg-warm-50 rounded-xl font-heading font-700 px-6 py-3 text-base gap-2"
+              data-ocid="google_reviews.secondary_button"
             >
               <GoogleGIcon />
               See All Reviews

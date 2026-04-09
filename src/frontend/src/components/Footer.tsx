@@ -1,7 +1,18 @@
-import { Heart, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import sclcLogo from "@/assets/sclc-logo.png";
+import {
+  ExternalLink,
+  Heart,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+  Star,
+} from "lucide-react";
 import LogoDownloadButton from "./LogoDownloadButton";
 
 const CENTRE_EMAIL = "sisodiyachildlearningcentre@gmail.com";
+const GOOGLE_BUSINESS_URL =
+  "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+LG-382+Sector+5+Gurugram+Haryana+122001";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -23,12 +34,9 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div className="w-14 h-14 flex-shrink-0 bg-white rounded-xl p-1">
                 <img
-                  src="/assets/sclc-logo-main.png"
+                  src={sclcLogo}
                   alt="Sisodiya Child Learning Centre Logo"
                   className="w-full h-full object-contain"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
                 />
               </div>
               <div>
@@ -45,7 +53,6 @@ export default function Footer() {
               of children with special needs through compassionate,
               evidence-based care.
             </p>
-            {/* Logo Download Button */}
             <LogoDownloadButton />
           </div>
 
@@ -66,12 +73,56 @@ export default function Footer() {
                     type="button"
                     onClick={() => handleNavClick(link.href)}
                     className="font-body text-sm text-background/70 hover:text-background transition-colors"
+                    data-ocid="footer.link"
                   >
                     {link.label}
                   </button>
                 </li>
               ))}
             </ul>
+
+            {/* Google Business Link */}
+            <div className="mt-5 pt-4 border-t border-background/10">
+              <a
+                href={GOOGLE_BUSINESS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl px-3 py-2.5 transition-all duration-200 group"
+                data-ocid="footer.link"
+              >
+                <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-white flex-shrink-0">
+                  <span
+                    className="font-heading font-900 text-xs leading-none"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}
+                  >
+                    G
+                  </span>
+                </span>
+                <div>
+                  <p className="font-heading font-700 text-xs text-background">
+                    Find us on Google Business
+                  </p>
+                  <div className="flex items-center gap-1">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star
+                        key={s}
+                        className="w-2.5 h-2.5 text-golden-400 fill-golden-400"
+                      />
+                    ))}
+                    <span className="font-body text-xs text-background/60 ml-0.5">
+                      4.9
+                    </span>
+                  </div>
+                </div>
+                <ExternalLink className="w-3.5 h-3.5 text-background/50 group-hover:text-background transition-colors ml-auto" />
+              </a>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -79,19 +130,17 @@ export default function Footer() {
             <h4 className="font-heading font-700 text-sm text-background mb-4 uppercase tracking-wider">
               Contact Us
             </h4>
-
-            {/* Address */}
             <div className="flex items-start gap-2 mb-3">
               <MapPin className="w-4 h-4 text-warm-400 mt-0.5 flex-shrink-0" />
               <div>
-                <p className="font-body text-sm text-background/70">Sector 5</p>
+                <p className="font-body text-sm text-background/70">
+                  LG-382, Sector 5
+                </p>
                 <p className="font-body text-sm text-background/70">
                   Gurugram, Haryana – 122001
                 </p>
               </div>
             </div>
-
-            {/* Phone */}
             <div className="flex items-center gap-2 mb-3">
               <Phone className="w-4 h-4 text-warm-400 flex-shrink-0" />
               <a
@@ -101,8 +150,6 @@ export default function Footer() {
                 6376544185
               </a>
             </div>
-
-            {/* WhatsApp */}
             <div className="flex items-center gap-2 mb-3">
               <MessageCircle className="w-4 h-4 text-[#25D366] flex-shrink-0" />
               <a
@@ -114,8 +161,6 @@ export default function Footer() {
                 WhatsApp: 9784986081
               </a>
             </div>
-
-            {/* Email */}
             <div className="flex items-center gap-2 mb-4">
               <Mail className="w-4 h-4 text-golden-400 flex-shrink-0" />
               <a
@@ -125,7 +170,6 @@ export default function Footer() {
                 {CENTRE_EMAIL}
               </a>
             </div>
-
             <div className="pt-3 border-t border-background/10">
               <p className="font-heading font-700 text-sm text-background">
                 Director

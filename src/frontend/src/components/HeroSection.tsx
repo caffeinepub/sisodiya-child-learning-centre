@@ -1,5 +1,31 @@
+import sclcLogo from "@/assets/sclc-logo.png";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Sparkles, Star } from "lucide-react";
+import { ArrowDown, ExternalLink, Sparkles, Star } from "lucide-react";
+
+const GOOGLE_BUSINESS_URL =
+  "https://www.google.com/maps/search/Sisodiya+Child+Learning+Centre+LG-382+Sector+5+Gurugram+Haryana+122001";
+
+function GoogleGIcon({ size = "sm" }: { size?: "sm" | "md" }) {
+  const cls = size === "md" ? "w-8 h-8 text-base" : "w-5 h-5 text-xs";
+  return (
+    <span
+      className={`inline-flex items-center justify-center ${cls} rounded-full border border-warm-200 bg-white shadow-xs select-none flex-shrink-0`}
+    >
+      <span
+        className="font-heading font-900 leading-none"
+        style={{
+          background:
+            "linear-gradient(90deg, #4285F4 0%, #EA4335 33%, #FBBC05 66%, #34A853 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+        }}
+      >
+        G
+      </span>
+    </span>
+  );
+}
 
 export default function HeroSection() {
   const handleScroll = (href: string) => {
@@ -44,14 +70,13 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="text-center lg:text-left animate-fade-up">
-            {/* Official SVG Logo — prominently displayed */}
+            {/* Logo */}
             <div className="flex justify-center lg:justify-start mb-6">
               <div className="relative">
-                {/* Glow ring behind logo */}
                 <div className="absolute inset-0 rounded-full bg-warm-300/30 blur-xl scale-110 pointer-events-none" />
                 <div className="relative w-36 h-36 sm:w-40 sm:h-40 drop-shadow-xl">
                   <img
-                    src="/assets/sclc-logo-main.png"
+                    src={sclcLogo}
                     alt="Sisodiya Child Learning Centre Logo"
                     className="w-full h-full object-contain"
                   />
@@ -111,11 +136,12 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-5">
               <Button
                 onClick={() => handleScroll("#contact")}
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-warm-600 rounded-2xl font-heading font-700 text-base shadow-warm-lg px-8"
+                data-ocid="hero.primary_button"
               >
                 Book a Consultation
               </Button>
@@ -124,24 +150,53 @@ export default function HeroSection() {
                 variant="outline"
                 size="lg"
                 className="border-warm-300 text-warm-700 hover:bg-warm-100 rounded-2xl font-heading font-700 text-base px-8"
+                data-ocid="hero.secondary_button"
               >
                 Our Services
               </Button>
             </div>
+
+            {/* Google Business Badge */}
+            <a
+              href={GOOGLE_BUSINESS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-white border border-warm-200 hover:border-warm-300 hover:shadow-md rounded-2xl px-4 py-3 shadow-sm transition-all duration-200 group"
+              data-ocid="hero.link"
+            >
+              <GoogleGIcon size="md" />
+              <div className="text-left">
+                <p className="font-heading font-700 text-sm text-foreground">
+                  Google Business Profile
+                </p>
+                <div className="flex items-center gap-1.5">
+                  <div className="flex gap-0.5">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star
+                        key={s}
+                        className="w-3 h-3 text-golden-400 fill-golden-400"
+                      />
+                    ))}
+                  </div>
+                  <span className="font-body text-xs text-muted-foreground">
+                    4.9 · 50+ Reviews
+                  </span>
+                </div>
+              </div>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-warm-600 transition-colors ml-1" />
+            </a>
           </div>
 
           {/* Hero Image */}
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg">
-              {/* Decorative frame */}
               <div className="absolute -inset-4 rounded-4xl bg-gradient-to-br from-warm-200/60 to-sage-100/60 blur-xl" />
               <div className="relative rounded-4xl overflow-hidden shadow-warm-lg border-4 border-warm-100">
                 <img
-                  src="/assets/generated/hero-banner.dim_1200x400.png"
-                  alt="Children learning and growing at Sisodiya Child Learning Centre"
-                  className="w-full h-64 sm:h-80 object-cover"
+                  src={sclcLogo}
+                  alt="Sisodiya Child Learning Centre"
+                  className="w-full h-64 sm:h-80 object-contain bg-warm-50 p-8"
                 />
-                {/* Overlay card */}
                 <div className="absolute bottom-4 left-4 right-4 bg-card/90 backdrop-blur-sm rounded-2xl p-4 shadow-card">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-warm-100 flex items-center justify-center flex-shrink-0">
@@ -159,7 +214,6 @@ export default function HeroSection() {
                 </div>
               </div>
 
-              {/* Stats floating cards */}
               <div className="absolute -top-4 -left-4 bg-card rounded-2xl shadow-card p-3 border border-border">
                 <p className="font-heading font-800 text-2xl text-primary">
                   6+

@@ -1,3 +1,4 @@
+import sclcLogo from "@/assets/sclc-logo.png";
 import { Button } from "@/components/ui/button";
 import { Heart, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -48,7 +49,7 @@ export default function Navigation() {
           >
             <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 drop-shadow-sm">
               <img
-                src="/assets/sclc-logo-main.png"
+                src={sclcLogo}
                 alt="Sisodiya Child Learning Centre Logo"
                 className="w-full h-full object-contain"
               />
